@@ -69,8 +69,8 @@ precmd() {
   if [ -d .git ]; then
     if [[ $(git remote) != "" ]]; then
       branch="$(git rev-parse --abbrev-ref HEAD)"
-      ahead="$(git rev-list --right-only --count $branch...origin/$branch)"
-      behind="$(git rev-list --left-only --count $branch...origin/$branch)"
+      behind="$(git rev-list --right-only --count $branch...origin/$branch)"
+      ahead="$(git rev-list --left-only --count $branch...origin/$branch)"
 
       if [[ $ahead -ne 0 ]]; then
         ahead="%F{$COMMON_COLORS_GIT_STATUS_AHEAD}↑$ahead%f"
