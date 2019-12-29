@@ -6,9 +6,9 @@ COMMON_PROMPT_SYMBOL="❯"
 # Colors
 COMMON_COLORS_HOST_ME=green
 COMMON_COLORS_HOST_AWS_VAULT=yellow
-COMMON_COLORS_CURRENT_DIR=blue
+COMMON_COLORS_CURRENT_DIR=yellow
 
-COMMON_COLORS_RETURN_STATUS_TRUE=yellow
+COMMON_COLORS_RETURN_STATUS_TRUE=blue
 COMMON_COLORS_RETURN_STATUS_FALSE=red
 
 COMMON_COLORS_GIT_STATUS_STAGED=green
@@ -97,8 +97,14 @@ common_bg_jobs() {
   echo -n $bg_status
 }
 
+rare_root_status() {
+  if [[ $UID -eq 0 ]]; then
+    echo -n "%F{red}\uF198 %f"
+  fi
+}
+
 # Left Prompt
-PROMPT="$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)"
+PROMPT="$(rare_root_status)$(common_host)$(common_current_dir)$(common_bg_jobs)$(common_return_status)"
 
 # Right Prompt
 RPROMPT='${vcs_info_msg_0_}'
