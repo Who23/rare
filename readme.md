@@ -22,6 +22,10 @@ Run this script:
 ```sh
 wget -O ~/rare/rare.zsh-theme https://raw.githubusercontent.com/Who23/rare/master/rare.zsh-theme
 ```
+or 
+```sh
+curl -O ~/rare/rare.zsh-theme https://raw.githubusercontent.com/Who23/rare/master/rare.zsh-theme
+``
 
 Update your `.zshrc` file with:
 ```sh
