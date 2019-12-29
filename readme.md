@@ -25,7 +25,7 @@ wget -O ~/rare/rare.zsh-theme https://raw.githubusercontent.com/Who23/rare/maste
 or 
 ```sh
 curl -O ~/rare/rare.zsh-theme https://raw.githubusercontent.com/Who23/rare/master/rare.zsh-theme
-``
+```
 
 Update your `.zshrc` file with:
 ```sh
